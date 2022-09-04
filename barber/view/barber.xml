@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <record id='barber_form_view' model='ir.ui.view'>
+                <field name='name'>Barber</field>
+                <field name='model'>barber</field>
+                <field name='arch' type='xml'>
+                        <form>
+                                <sheet>
+                                        <group>
+                                                <field name='customer_name' />
+                                                <field name='employee_name' />
+                                                <field name='chair_number' />
+                                                <field name='description' />
+                                                <field name='service_cost' />
+                                                <field name='chair_status' />
+                                                <field name='form_status' />
+                                        </group>
+                                </sheet>
+                        </form>
+                </field>
+        </record>
+
+        <record id="barber_action" model="ir.actions.act_window">
+                <field name="name">Barber</field>
+                <field name="res_model">barber</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+        </record>
+
+        <menuitem name='Barber' id='barber_menu' />
+
+</odoo>
